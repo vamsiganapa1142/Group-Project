@@ -1,0 +1,18 @@
+<launch>
+	<node pkg = "vd_virtual" name = "manual_controller" type = "manual_control_04052021.py" output = "screen">
+	</node>
+	<node pkg = "vd_virtual" name = "gear_predictor" type = "Pub_gear.py" >
+	</node>
+	<node pkg = "vd_virtual" name = "velocity_predictor" type = "Pub_vel.py">
+	</node>
+	<node pkg = "vd_virtual" name = "longitudnal_dynamics" type = "ld.py">
+	</node>
+	<node pkg = "vd_virtual" name = "lateral_dynamics" type = "lateral_dynamics_updated_1.py">
+	</node>
+	<node pkg = "vd_virtual" name = "previous_latdyn" type = "Pub_LAt.py">
+	</node>
+	<node pkg = "vd_virtual" name = "longdyn_velacc" type = "Pub_alle.py">
+	</node>
+	<node pkg = "vd_virtual" name = "publisher" type = "Pub_osi3_alle.py">
+	</node>
+</launch>
