@@ -10,7 +10,7 @@ project(vd_virtual)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
-  std_msgs__1
+  std_msgs__2
 )
 
 ## System dependencies are found with CMake's conventions
